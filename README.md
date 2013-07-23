@@ -6,9 +6,8 @@
 **Master build:** [![Master branch build status][travis-master]][travis]
 
 
-This library makes it easy to defer the construction or execution of a service until it's needed.
-It can be installed in whichever way you prefer, but I recommend [NPM][npm].<br/>
-[![NPM][nodeico]][npm]
+This library makes it easy to defer the construction or execution of a service until it's needed.<br/>
+It can be installed in whichever way you prefer, but I recommend [NPM][npm].
 
 
 ### Basic usage ###
