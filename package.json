@@ -1,0 +1,39 @@
+{
+    "name": "defur",
+    "description": "Defer construction of a service until it is needed.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/adlawson/defur",
+
+    "keywords": [
+        "construction",
+        "constructor",
+        "defer",
+        "execution",
+        "loader",
+        "service",
+        "services"
+    ],
+
+    "author": {
+        "name": "Andrew Lawson",
+        "url": "http://adlawson.com"
+    },
+
+    "licenses" : [
+        {
+            "type" : "MIT",
+            "url" : "https://github.com/adlawson/defur/blob/master/LICENSE"
+        }
+    ],
+
+    "main": "./src/defur.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adlawson/defur.git"
+    },
+
+    "devDependencies": {
+        "chai": "~1.7.2",
+        "mocha": "~1.12.0"
+    }
+}
