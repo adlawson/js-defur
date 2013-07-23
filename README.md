@@ -4,6 +4,7 @@
 
 **Version:** *0.1.2*<br/>
 **Master build:** [![Master branch build status][travis-master]][travis]
+**Develop build:** [![Develop branch build status][travis-develop]][travis]
 
 
 This library makes it easy to defer the construction or execution of a service until it's needed.<br/>
@@ -63,9 +64,10 @@ You can find a copy of this license at http://www.opensource.org/licenses/mit or
 
 
 <!-- Links -->
-[travis]:        https://travis-ci.org/adlawson/defur
-[travis-master]: https://travis-ci.org/adlawson/defur.png?branch=master
-[npm]:           https://npmjs.org/package/defur
-[nodeico]:       https://nodei.co/npm/defur.png
-[vagrant]:       http://vagrantup.com
-[license]:       /LICENSE
+[travis]:         https://travis-ci.org/adlawson/defur
+[travis-develop]: https://travis-ci.org/adlawson/defur.png?branch=develop
+[travis-master]:  https://travis-ci.org/adlawson/defur.png?branch=master
+[npm]:            https://npmjs.org/package/defur
+[nodeico]:        https://nodei.co/npm/defur.png
+[vagrant]:        http://vagrantup.com
+[license]:        /LICENSE
