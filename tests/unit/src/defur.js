@@ -32,6 +32,17 @@
             assert.strictEqual(services.foo, services.foo);
         });
 
+        test('`defur` services don\'t collide', function() {
+            defur('foo', services, function() {
+                return {};
+            });
+            defur('bar', services, function() {
+                return {};
+            });
+
+            assert.notEqual(services.foo, services.bar);
+        });
+
         test('`defur` works with multiple service containers', function() {
             var otherServices = {};
 
