@@ -1,7 +1,7 @@
 {
     "name": "defur",
     "description": "Defer construction of a service until it is needed.",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "homepage": "https://github.com/adlawson/defur",
 
     "keywords": [

@@ -2,8 +2,8 @@
 
 <img src="http://stream1.gifsoup.com/view/247584/family-guy-care-bear-suicide-o.gif" alt="Defur" align="right" />
 
-**Version:** *0.1.2*<br/>
-**Master build:** [![Master branch build status][travis-master]][travis]
+**Version:** *0.2.0*<br/>
+**Master build:** [![Master branch build status][travis-master]][travis]<br/>
 **Develop build:** [![Develop branch build status][travis-develop]][travis]
 
 
