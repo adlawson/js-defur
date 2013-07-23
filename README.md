@@ -14,10 +14,19 @@ It can be installed in whichever way you prefer, but I recommend [NPM][npm].
 ```js
 var defur = require('defur');
 var http = require('http'); // Just using HTTP as an example
-var services = {};
+var services = {
 
-// Defer construction
-defur('server', services, function() {
+    // Define the service inline...
+    get server() {
+        return defur('server', this, function() {
+            return http.createServer().listen(3000);
+        });
+    }
+
+};
+
+// ...or define the service later
+defur.define('server', this, function() {
     return http.createServer().listen(3000);
 });
 

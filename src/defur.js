@@ -13,39 +13,49 @@
 
     'use strict';
 
-    var definitions = {};
-    var containers  = [];
+    var containers = [];
+    var services   = {};
 
     /**
      * @param {String} name
-     * @param {Object} container
+     * @param {Object} context
+     * @param {Function} definition
+     * @return {Mixed}
+     * @api public
+     */
+    var defur = function(name, context, definition) {
+        var services = resolveContext(context);
+        if (!services.hasOwnProperty(name)) {
+            services[name] = definition();
+        }
+
+        return services[name];
+    };
+
+    /**
+     * @param {String} name
+     * @param {Object} context
      * @param {Function} definition
      * @api public
      */
-    var defur = function(name, container, definition) {
-        var services = resolveContainer(container);
-
-        Object.defineProperty(container, name, {
+    defur.define = function(name, context, definition) {
+        Object.defineProperty(context, name, {
             enumerable: true,
             get: function() {
-                if (!services.hasOwnProperty(name)) {
-                    services[name] = definition();
-                }
-
-                return services[name];
+                return defur(name, context, definition);
             }
         });
     };
 
-    function resolveContainer(container) {
-        var index = containers.indexOf(container);
+    function resolveContext(context) {
+        var index = containers.indexOf(context);
         if (-1 === index) {
-            containers.push(container);
-            index = containers.indexOf(container);
-            definitions[index] = {};
+            containers.push(context);
+            index = containers.indexOf(context);
+            services[index] = {};
         }
 
-        return definitions[index];
+        return services[index];
     };
 
     if (typeof define === 'function' && define.amd) {
