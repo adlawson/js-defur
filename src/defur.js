@@ -9,7 +9,7 @@
  * @see  http://github.com/adlawson/defur/blob/master/LICENSE
  * @link http://github.com/adlawson/defur
  */
-(function() {
+(function(globals) {
 
     var definitions = {};
     var containers  = [];
@@ -20,7 +20,7 @@
      * @param {Function} definition
      * @api public
      */
-    module.exports = function(name, container, definition) {
+    var defur = function(name, container, definition) {
         var services = resolveContainer(container);
 
         Object.defineProperty(container, name, {
@@ -46,4 +46,14 @@
         return definitions[index];
     };
 
-})();
+    if (typeof define === 'function' && define.amd) {
+        define(function () {
+            return defur;
+        });
+    } else if (typeof module !== 'undefined' && null !== module) {
+        module.exports = defur;
+    } else {
+        globals.defur = defur;
+    }
+
+})(this);
