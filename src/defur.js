@@ -11,6 +11,8 @@
  */
 (function(globals) {
 
+    'use strict';
+
     var definitions = {};
     var containers  = [];
 
